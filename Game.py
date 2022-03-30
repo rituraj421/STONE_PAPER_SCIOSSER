@@ -1,7 +1,7 @@
 #stone paper sciosser game
 from tkinter import*
 from PIL import Image, ImageTk
-from random import randint
+from random import randint, choices
 
 root = Tk()
 root.title("Stone Paper Sciosser")
@@ -43,46 +43,46 @@ def updateMessage(X):
     msg['text'] = X
 
 #     #update players score
-# def updateMeScore():
-#         score = int(meScore["text"])
-#         score += 1
-#         meScore["text"] = str[score]
+def updateMeScore():
+        score = int(meScore["text"])
+        score += 1
+        meScore["text"] = str[score]
 
 
 
-# def updateHerScore():
-#         score = int(herScore["text"])
-#         score += 1
-#         herScore["text"] = str[score]
+def updateHerScore():
+        score = int(herScore["text"])
+        score += 1
+        herScore["text"] = str[score]
     
 # #who is winner
-# def checkWinner(me, her):
-#     if me == her:
-#         updateMessage("yeah!!, It's a Tie🙂 Play again")
-#     elif me == "stone":
-#         if her == "paper":
-#             updateMessage("You lose1!😞, she won!!🙂")
-#             updateHerScore()
-#         else:
-#             updateMessage("You Win!!🙂")
-#             updateMeScore()
-#     elif me == "paper":
-#         if her == "Sciosser":
-#             updateMessage("You lose1!😞, she won!!🙂")
-#             updateHerScore()
-#         else:
-#             updateMessage("You Win!!🙂")
-#             updateMeScore()
-#     elif me == "Sciosser":
-#         if her == "stone":
-#             updateMessage("You lose1!😞, she won!!🙂")
-#             updateHerScore()
-#         else:
-#             updateMessage("You Win!!🙂")
-#             updateMeScore()
+def checkWinner(me, her):
+    if me == her:
+        updateMessage("yeah!!, It's a Tie🙂 Play again")
+    elif me == "stone":
+        if her == "paper":
+            updateMessage("You lose1!😞, she won!!🙂")
+            updateHerScore()
+        else:
+            updateMessage("You Win!!🙂")
+            updateMeScore()
+    elif me == "paper":
+        if her == "Sciosser":
+            updateMessage("You lose1!😞, she won!!🙂")
+            updateHerScore()
+        else:
+            updateMessage("You Win!!🙂")
+            updateMeScore()
+    elif me == "Sciosser":
+        if her == "stone":
+            updateMessage("You lose1!😞, she won!!🙂")
+            updateHerScore()
+        else:
+            updateMessage("You Win!!🙂")
+            updateMeScore()
 
-#     else:
-#         pass
+    else:
+        pass
 
 # #choise
 
@@ -90,13 +90,13 @@ def updateMessage(X):
 def updateChoice(X):
 
 # #Her Choice
-#     herChoice = choices[randint(0,2)]      
-#     if herChoice == "STONE":
-#         her_label.configure(image=stone_img_her)
-#     elif herChoice == "PAPER":
-#         her_label.configure(image=paper_img_her)
-#     else:
-#         her_label.configure(image=Sciosser_img_her)
+    herChoice = choices[randint(0,2)]      
+    if herChoice == "STONE":
+        her_label.configure(image=stone_img_her)
+    elif herChoice == "PAPER":
+        her_label.configure(image=paper_img_her)
+    else:
+        her_label.configure(image=Sciosser_img_her)
 
 
 
